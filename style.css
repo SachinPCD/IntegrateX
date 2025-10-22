@@ -924,6 +924,19 @@ body {
   border-color: #5dade2;
 }
 
+/* Make sure icon glyphs and SVG children are visible (white) on hover
+   Scoped to .social-icons-container so other links are not affected */
+.social-icons-container .social-icon:hover,
+.social-icons-container .social-icon:focus {
+  background: #5dade2;
+  color: #ffffff !important;
+}
+.social-icons-container .social-icon:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
 /* Footer Text */
 .footer-text {
   grid-column: 1 / -1;
