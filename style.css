@@ -134,7 +134,7 @@ body {
 .menu-toggle {
   display: none;
   font-size: 30px;
-  color: white;
+  color: #2563eb; /* Blue color for white background */
   cursor: pointer;
   z-index: 1001;
 }
@@ -764,6 +764,11 @@ body {
   .register-btn.professional {
     font-size: 1rem;
     padding: 0.9rem 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
   }
 }
 

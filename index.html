@@ -62,7 +62,7 @@
             <span class="typewriter-text"></span>
           </p>
           <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600"
-            style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+            style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAio60lqha6W1EADqcbOtPEFZJPZv42ERQbltDi-gTcLskIw/viewform?usp=header"
               target="_blank" class="register-btn professional">Register Now</a>
             <a href="#about" class="register-btn professional"
@@ -531,10 +531,12 @@
       function openMenu() {
         navbar.classList.add("active");
         document.body.classList.add("menu-open");
+        menuToggle.innerHTML = "&times;"; // Change to X icon
       }
       function closeMenu() {
         navbar.classList.remove("active");
         document.body.classList.remove("menu-open");
+        menuToggle.innerHTML = "&#9776;"; // Change back to hamburger
       }
 
       menuToggle.addEventListener("click", (e) => {
