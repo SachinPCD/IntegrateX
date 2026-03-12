@@ -538,6 +538,22 @@ body {
   .event-info.professional {
     grid-template-columns: 1fr !important;
   }
+
+  .req-box {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .instructor-card.blue-pill {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center !important;
+  }
+
+  .instructor-right {
+    align-items: center !important;
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 480px) {
