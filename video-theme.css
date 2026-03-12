@@ -38,6 +38,7 @@
   object-fit: cover;
   z-index: -2;
   pointer-events: none;
+  filter: brightness(0.6) !important; /* Lowers video brightness */
 }
 
 /* Hide ALL browser video controls */
