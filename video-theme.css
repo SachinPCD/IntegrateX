@@ -63,6 +63,53 @@ video::-webkit-media-controls-overlay-play-button {
   pointer-events: none;
 }
 
+/* Animated Particles */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; /* Above the video but below the main content */
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 8px; /* increased from 5px */
+  height: 8px; /* increased from 5px */
+  background-color: rgba(96, 165, 250, 0.8); /* vivid blue */
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 1); /* larger base shadow */
+  animation: floatUp 6s infinite linear, glow 2.5s infinite alternate;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-100px) scale(1.2);
+  }
+  100% {
+    transform: translateY(-200px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px rgba(96, 165, 250, 0.4); /* larger min glow */
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(147, 197, 253, 1); /* larger max glow */
+  }
+}
+
 /* Hide the old wave background */
 .hero-bg {
   display: none !important;
