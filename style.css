@@ -134,7 +134,8 @@ body {
 .menu-toggle {
   display: none;
   font-size: 30px;
-  color: #2563eb; /* Blue color for white background */
+  color: #2563eb;
+  /* Blue color for white background */
   cursor: pointer;
   z-index: 1001;
 }
@@ -470,7 +471,8 @@ body {
 
 .outcome-item span {
   font-size: 0.95rem;
-  color: #e0f2fe; /* Light blue/white shade for dark background */
+  color: #e0f2fe;
+  /* Light blue/white shade for dark background */
   line-height: 1.4;
 }
 
@@ -736,7 +738,7 @@ body {
   .outcomes-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .outcome-item {
     text-align: left;
     align-items: flex-start;
@@ -765,7 +767,7 @@ body {
     font-size: 1rem;
     padding: 0.9rem 2rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column !important;
     align-items: center !important;

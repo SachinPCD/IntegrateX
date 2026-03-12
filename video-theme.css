@@ -265,6 +265,8 @@ body {
 .req-col {
   flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .faint-title {
@@ -278,7 +280,7 @@ body {
 }
 
 .blue-pill {
-  background: #11244d39 !important;
+  background: #23345f !important;
   border-radius: 8px !important;
   color: #ffffff !important;
   padding: 1rem 1.5rem !important;
@@ -332,7 +334,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1.5rem !important;
-  height: 100%;
+  flex: 1;
 }
 
 .req-pill .pill-top {
@@ -455,11 +457,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #74777c, #afb2b8) !important;
+  background: linear-gradient(180deg, #3b82f6, #1e3a8a) !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #7f8186, #2563eb) !important;
+  background: linear-gradient(180deg, #60a5fa, #2563eb) !important;
 }
 
 /* Schedule layout elements glassmorphism */
