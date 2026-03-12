@@ -187,8 +187,8 @@ body {
 
 /* About Section */
 #about {
-  background: #203557 !important;
-  /* Move blue background to the full section */
+  background: linear-gradient(180deg, #0f172a 0%, #17366b 50%, #203557 100%) !important;
+  /* Move gradient background to the full section */
   left: 30px !important;
   /* Align with hero content */
   right: 30px !important;
