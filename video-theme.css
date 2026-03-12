@@ -633,3 +633,197 @@ body {
   position: static !important;
   overflow: scroll !important;
 }
+
+/* scroll down animation */
+/* ===== SCROLL INDICATOR ANIMATION - MOBILE ONLY ===== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px;
+  z-index: 100;
+  cursor: pointer;
+  animation: fadeInUp 1.5s ease-in-out;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
+  width: auto;
+  margin: 0 auto;
+  pointer-events: auto;
+}
+
+/* Hide by default on desktop */
+.scroll-indicator {
+  display: none !important;
+}
+
+/* Show only on mobile devices */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: flex !important;
+  }
+}
+
+/* Mouse shape */
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  position: relative;
+  transition: border-color 0.3s ease;
+  margin: 0 auto;
+}
+
+.wheel {
+  width: 4px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 2s infinite;
+  transition: background 0.3s ease;
+}
+
+/* Arrow animation */
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.arrow span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+  transform: rotate(45deg);
+  animation: arrowDown 2s infinite;
+  opacity: 0;
+  transition: border-color 0.3s ease;
+  margin: 0 auto;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Scroll text */
+.scroll-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  transition: color 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+/* Hide animation */
+.scroll-indicator.hide-scroll-indicator {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  animation: fadeOutDown 0.5s ease forwards;
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(15px);
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+    visibility: hidden;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 20px;
+  }
+  
+  .mouse {
+    width: 25px;
+    height: 40px;
+  }
+  
+  .wheel {
+    width: 3px;
+    height: 8px;
+  }
+  
+  .scroll-text {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-indicator {
+    bottom: 15px;
+  }
+  
+  .mouse {
+    width: 22px;
+    height: 35px;
+  }
+  
+  .arrow span {
+    width: 8px;
+    height: 8px;
+  }
+}
